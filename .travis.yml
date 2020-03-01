@@ -1,0 +1,10 @@
+import:
+  - build-config.yml
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t mohammed-anas/docker-react -f Dockerfile.dev .
+script:
+  - docker run mohammed-anas/docker-react npm run test -- --coverage
