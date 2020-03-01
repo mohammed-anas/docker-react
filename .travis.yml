@@ -1,5 +1,4 @@
-import:
-  - build-config.yml
+language: generic
 sudo: required
 services:
   - docker
