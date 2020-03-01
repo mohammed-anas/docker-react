@@ -1,9 +1,0 @@
-language: generic
-sudo: required
-services:
-  - docker
-
-before_install:
-  - docker build -t mohammed-anas/docker-react-poc -f Dockerfile.dev .
-script:
-  - docker run mohammed-anas/docker-react-poc npm run test -- --coverage
